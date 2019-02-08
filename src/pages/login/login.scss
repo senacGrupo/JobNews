@@ -7,3 +7,27 @@
 .tpt {
     background-color: transparent;
 }
+.logo-author {
+    display: flex;
+    height: 70pt;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end
+}
+.logo-author-image {
+    display: flex;
+    width: 50pt;
+    height: 50pt;
+}
+
+.no-scroll .scroll-content{
+    overflow: unset;
+}
+.input-md .text-input-md{
+    text-align: center;
+}
+
+.input-white{
+    color: white;
+}
+
