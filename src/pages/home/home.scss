@@ -1,3 +1,12 @@
 page-home {
 
 }
+.my-menu .toolbar-content-md{
+flex: inherit;
+// justify-content: space-around;
+}
+.btn-more{
+    padding: 0.5em;
+    border-radius: 30%;
+    background-color: rgba(0, 123, 255, 0.103);
+}

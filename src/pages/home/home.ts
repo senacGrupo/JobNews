@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NoticiaService } from '../../services/noticias.services';
+import { Noticia } from '../../model/noticias';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the HomePage page.
@@ -15,11 +18,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  noticias : Noticia[];
+
+  constructor(public navCtrl: NavController, 
+  public navParams: NavParams,
+  public noticiaService : NoticiaService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+  ionViewDidLoad() { 
+    this.noticiaService.getNoticias().subscribe(response => {
+      this.noticias = response;
+    });
+  }
+
+  profilePage(){
+    this.navCtrl.push("ProfilePage");
   }
 
 }
